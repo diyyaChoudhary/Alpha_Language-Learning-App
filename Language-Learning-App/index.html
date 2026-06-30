@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LingoLearn</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- Header -->
+
+<div class="header">
+
+<div class="logo">📚</div>
+
+<div>
+
+<h1>📚 Language Learning App</h1>
+
+<p>Learn one word every day 🚀</p>
+
+</div>
+
+</div>
+
+<!-- Stats -->
+
+<div class="stats">
+
+<div class="stat-card">
+
+<h3>⭐ XP</h3>
+
+<p id="xp">0</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>🔥 Streak</h3>
+
+<p>1 Day</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>📖 Words</h3>
+
+<p id="totalWords">5</p>
+
+</div>
+
+</div>
+
+<!-- Flashcard -->
+
+<div class="flashcard">
+
+<h2 id="word"></h2>
+
+<div id="answer" class="hidden">
+
+<p>Meaning</p>
+
+<h3 id="meaning"></h3>
+
+<p>Pronunciation</p>
+
+<h3 id="pronunciation"></h3>
+
+</div>
+
+<button id="showBtn">Show Meaning</button>
+
+<div class="buttons">
+
+<button id="prevBtn">⬅ Previous</button>
+
+<button id="nextBtn">Next ➜</button>
+
+</div>
+
+</div>
+
+<!-- Progress -->
+
+<div class="section">
+
+<h2>📈 Progress</h2>
+
+<div class="progress-container">
+
+<div id="progressBar"></div>
+
+</div>
+
+<p id="progressText">0 / 0 Words Learned</p>
+
+</div>
+
+<!-- Add Word -->
+
+<div class="section">
+
+<h2>➕ Add New Word</h2>
+
+<input type="text" id="newWord" placeholder="English Word">
+
+<input type="text" id="newMeaning" placeholder="Meaning">
+
+<input type="text" id="newPronunciation" placeholder="Pronunciation">
+
+<button onclick="addWord()">Add Word</button>
+
+</div>
+
+<!-- Saved Words -->
+
+<div class="section">
+
+<h2>📚 Saved Words</h2>
+
+<div id="wordList"></div>
+
+</div>
+
+<!-- Quiz -->
+
+<div class="section">
+
+<h2>🧠 Quiz Challenge</h2>
+
+<div class="quiz">
+
+<h3 id="quizQuestion"></h3>
+
+<div id="options"></div>
+
+<p id="result"></p>
+
+<h3>🏆 Score : <span id="score">0</span></h3>
+
+<button onclick="nextQuiz()">Next Question</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
